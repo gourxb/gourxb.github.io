@@ -1,0 +1,11 @@
+{{- template "_internal/alias.html" (dict "Permalink" .Params.target) -}}
+ <!-- {{- if .Params.target -}}
+  {{- template "_internal/alias.html" (dict
+      "Permalink" .Params.target
+      "RelPermalink" .Params.target
+      "Page" .
+  ) -}}
+{{- else -}}
+  {{ errorf "redirect page missing target param: %s" .File.Path }}
+{{- end -}}
+ -->

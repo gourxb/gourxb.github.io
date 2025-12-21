@@ -1,0 +1,18 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Gourab Chowdhury</title>
+        <link>http://localhost:1313/</link>
+        <description>This is my cool site</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>gourabch2@gmail.com (Gourab Chowdhury)</managingEditor>
+            <webMaster>gourabch2@gmail.com (Gourab Chowdhury)</webMaster><lastBuildDate>Fri, 09 Sep 2022 20:09:11 &#43;0530</lastBuildDate>
+            <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+        <item>
+    <title>First_post</title>
+    <link>http://localhost:1313/first_post/</link>
+    <pubDate>Fri, 09 Sep 2022 20:09:11 &#43;0530</pubDate>
+    <author>Gourab Chowdhury</author>
+    <guid>http://localhost:1313/first_post/</guid>
+    <description><![CDATA[My first post Hello World!!]]></description>
+</item>
+</channel>
+</rss>
