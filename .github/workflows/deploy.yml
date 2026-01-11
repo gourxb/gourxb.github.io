@@ -1,32 +1,53 @@
-name: Build and Deploy Hugo Site
+name: Build Hugo Notes Site
 
 on:
   push:
     branches:
       - main
-  repository_dispatch:
-    types: [notes-updated]
 
 jobs:
-  build:
+  build-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
-        with:
-          submodules: recursive
+    # 1. Checkout notes repo
+    - name: Checkout notes repo
+      uses: actions/checkout@v4
 
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v3
-        with:
-          hugo-version: latest
+    # 2. Checkout Hugo site repo
+    - name: Checkout Hugo site repo
+      uses: actions/checkout@v4
+      with:
+        repository: gourxb/gourxb.github.io
+        token: ${{ secrets.DEPLOY_TOKEN }}
+        path: site
 
-      - name: Build site
-        run: hugo --minify
+    # 3. Copy markdown notes into Hugo content
+    - name: Copy notes into Hugo
+      run: |
+        rm -rf site/content/notes
+        mkdir -p site/content/notes
+        cp -r *.md site/content/notes/
 
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
+    # 4. Install Hugo
+    - name: Install Hugo
+      uses: peaceiris/actions-hugo@v2
+      with:
+        hugo-version: 'latest'
+        extended: true
+
+    # 5. Build Hugo site
+    - name: Build site
+      run: |
+        cd site
+        hugo --minify
+
+    # 6. Deploy generated HTML
+    - name: Deploy to GitHub Pages repo
+      run: |
+        cd site
+        git config user.name "github-actions"
+        git config user.email "github-actions@github.com"
+        git add .
+        git commit -m "Auto build from notes repo" || echo "No changes"
+        git push
