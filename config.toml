@@ -14,7 +14,7 @@ languageName = "English"
 hasCJKLanguage = false
 
 # default amount of notes in each pages
-paginate = 12
+#paginate = 12
 # google analytics code [UA-XXXXXXXX-X]
 googleAnalytics = ""
 # copyright description used only for seo schema
@@ -29,6 +29,9 @@ enableEmoji = true
 
 # ignore some build errors
 ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
+
+[pagination]
+  pagerSize = 12
 
 publishDir = "."
 
@@ -134,7 +137,7 @@ publishDir = "."
   #  Section (all notes) page config
   [params.section]
     # special amount of notes in each section page
-    paginate = 20
+    #paginate = 20
     # date format (month and day)
     dateFormat = "01-02"
     # amount of RSS pages
@@ -143,7 +146,7 @@ publishDir = "."
   #  List (category or tag) page config
   [params.list]
     # special amount of notes in each list page
-    paginate = 20
+    #paginate = 20
     # date format (month and day)
     dateFormat = "01-02"
     # amount of RSS pages
@@ -211,7 +214,7 @@ publishDir = "."
     [params.home.notes]
       enable = false
       # special amount of notes in each home notes page
-      paginate = 6
+      #paginate = 6
       #  replaced with hiddenFromHomePage in params.page
       # default behavior when you don't set "hiddenFromHomePage" in front matter
       defaultHiddenFromHomePage = false
