@@ -30,6 +30,8 @@ enableEmoji = true
 # ignore some build errors
 ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
 
+publishDir = "."
+
 # Author config
 [author]
   name = "Gourab Chowdhury"
