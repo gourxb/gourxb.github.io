@@ -1,10 +1,15 @@
-baseURL = "gourxb.github.io/"
+baseURL = "https://gourxb.github.io/"
 
 # Change the default theme to be use when building the site with Hugo
 theme = "LoveIt1"
 
 # website title
 title = "Gourab Chowdhury"
+
+#suggested by Chatgpt
+relativeURLs = false
+canonifyURLs = true
+publishDir = "public"
 
 # language code ["en", "zh-CN", "fr", "pl", ...]
 languageCode = "en"
@@ -33,7 +38,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
 [pagination]
   pagerSize = 12
 
-publishDir = "."
+
 
 # Author config
 [author]
