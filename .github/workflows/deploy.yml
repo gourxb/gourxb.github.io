@@ -25,7 +25,8 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: '0.102.3'
+          # hugo-version: '0.102.3'
+          hugo-version: 'latest'
           extended: true
 
       - name: Build site
@@ -50,5 +51,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deploy
         uses: actions/deploy-pages@v4
-        with:
-          submodules: recursive
