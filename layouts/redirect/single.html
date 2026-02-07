@@ -1,0 +1,23 @@
+<!-- {{- template "_internal/alias.html" (dict "Permalink" .Params.target) -}} -->
+
+ <!-- {{- if .Params.target -}}
+  {{- template "_internal/alias.html" (dict
+      "Permalink" .Params.target
+      "RelPermalink" .Params.target
+      "Page" .
+  ) -}}
+{{- else -}}
+  {{ errorf "redirect page missing target param: %s" .File.Path }}
+{{- end -}}
+ -->
+
+ <!DOCTYPE html>
+<html>
+<head>
+  <title>{{ .Title }}</title>
+  <link rel="canonical" href="{{ .Params.redirect_to | default .Permalink }}"/>
+  <meta name="robots" content="noindex">
+  <meta charset="utf-8" />
+  <meta http-equiv="refresh" content="0; url={{ .Params.redirect_to | default .Permalink }}" />
+</head>
+</html>
