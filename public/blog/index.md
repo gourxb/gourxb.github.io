@@ -2,6 +2,6 @@
 
 ---
 type: redirect
-target: https://duckduckgo.com
+target: https://recursivelearning.hashnode.dev/
 ---
 
