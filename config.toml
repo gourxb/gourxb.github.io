@@ -607,7 +607,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
 # Permalinks config
 [Permalinks]
   # notes = ":year/:month/:filename"
-  notes = ":filename"
+  notes = "/notes/:filename"
 
 # Privacy config
 [privacy]
