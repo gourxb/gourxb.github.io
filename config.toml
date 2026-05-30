@@ -50,13 +50,13 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
 [menu]
   [[menu.main]]
     weight = 1
-    identifier = "notes1"
+    identifier = "notes"
     # you can add extra information before the name (HTML format is supported), such as icons
     pre = ""
     # you can add extra information after the name (HTML format is supported), such as icons
     note = ""
     name = "Notes"
-    url = "/notes1/"
+    url = "/notes/"
     # title will be shown when you hover on this menu link
     title = ""
   [[menu.main]]
@@ -216,7 +216,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
       #  disclaimer (HTML format is supported)
       disclaimer = ""
     # Home page notes
-    [params.home.notes1]
+    [params.home.notes]
       enable = true
       # special amount of notes in each home notes page
       #paginate = 6
