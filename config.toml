@@ -81,7 +81,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
     pre = ""
     note = ""
     name = "Blog"
-    url = "/blog"
+    url = "https://recursivelearning.hashnode.dev/"
     title = ""
     params = { target = "_blank" }
 
