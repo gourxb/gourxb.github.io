@@ -215,6 +215,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
       social = true
       #  disclaimer (HTML format is supported)
       disclaimer = ""
+      avatarSize = "large"
     # Home page notes
     [params.home.my-notes]
       enable = true
