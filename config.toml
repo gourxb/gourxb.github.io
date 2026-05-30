@@ -1,7 +1,7 @@
 baseURL = "https://gourxb.github.io/"
 
 # Change the default theme to be use when building the site with Hugo
-theme = "LoveIt1"
+theme = "LoveIt"
 
 # website title
 title = "Gourab Chowdhury"
