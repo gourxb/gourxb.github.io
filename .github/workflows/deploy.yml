@@ -31,9 +31,15 @@ jobs:
           # hugo-version: '0.102.3'
           hugo-version: 'latest'
           extended: true
-
+      - name: Clean Hugo cache
+        run: |
+         rm -rf public
+         rm -rf resources
+         rm -rf .hugo_build.lock
       - name: Build site
-        run: hugo --minify
+        run: hugo --gc --minify --cleanDestinationDir
+      # - name: Build site
+      #   run: hugo --minify
 
       - name: List public directory
         run: ls -la ./public
