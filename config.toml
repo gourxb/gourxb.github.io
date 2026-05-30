@@ -7,9 +7,9 @@ theme = "LoveIt1"
 title = "Gourab Chowdhury"
 
 #suggested by Chatgpt
-relativeURLs = true
-canonifyURLs = true
-publishDir = "public"
+#relativeURLs = true
+#canonifyURLs = true
+#publishDir = "public"
 
 # language code ["en", "zh-CN", "fr", "pl", ...]
 languageCode = "en"
