@@ -217,7 +217,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
       disclaimer = ""
     # Home page notes
     [params.home.notes]
-      enable = false
+      enable = true
       # special amount of notes in each home notes page
       #paginate = 6
       #  replaced with hiddenFromHomePage in params.page
